@@ -1,9 +1,9 @@
 pipeline {
    agent any
    stages {
-     stage('Hello') {
+     stage('Install bun') {
        steps {
-         echo "Hello"
+         sh 'curl -fsSL https://bun.sh/install | bash -s "bun-v1.0.0"'
        }
      }
    }
